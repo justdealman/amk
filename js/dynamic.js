@@ -1,5 +1,4 @@
-﻿'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)});
-function headerLines() {
+﻿function headerLines() {
 	$('header .before').css({
 		'width': $('header .menu.lc').offset().left+$('header .menu.lc').outerWidth()+'px'
 	});
