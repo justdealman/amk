@@ -137,6 +137,60 @@ $(document).ready(function() {
 			event.stopPropagation();
 		});
 	}
+	if ( $('.form-b span.date').length > 0 ) {
+		$('.form-b span.date input').datepicker({
+			dateFormat: 'dd.mm.yy',
+			firstDay: 1,
+			prevText: '',
+			nextText: '',
+			dayNamesMin: [ 'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс' ],
+			monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ]
+		});
+		$('.form-b span.date').append('<em></em>');
+		$('.form-b span.date em').bind('click', function() {
+			$(this).parent().find('input').focus();
+		});
+	}
+	if ( $('.form-b .file, .form-b .download').length > 0 ) {
+		$('.form-b .file .browse, .form-b .download .browse').bind('click', function() {
+			$(this).parent().find('input[type="file"]').trigger('click');
+		});
+		$('.form-b .file input[type="text"], .form-b .download input[type="text"]').bind('click', function() {
+			$(this).parent().find('input[type="file"]').trigger('click');
+		});
+		$('.form-b .file input[type="file"], .form-b .download input[type="file"]').bind('change', function() {
+			$(this).parent().find('input[type="text"]').val($(this).val().replace(/^.*[\\\/]/, ''));
+		});
+	}
+	$('.map-b .open').bind('click', function() {
+		$('.map-b .requisites').css({
+			'top': $('.map-b .contacts').offset().top+$('.map-b .contacts').outerHeight()+'px'
+		}).stop(true,true).fadeIn(250);
+	});
+	$('.map-b .requisites h5 span').bind('click', function() {
+		$('.map-b .requisites').stop(true,true).fadeOut(250);
+	});
+	if ( $('.modal').length > 0 ) {
+		$('.modal').append('<span class="close"></span>');
+	}
+	if ( $('.added').length > 0 ) {
+		$('.added').append('<span class="close"></span>');
+	}
+	$('[data-open]').bind('click', function(event) {
+		var e = $(this).attr('data-open');
+		var t = $(document).scrollTop()+($(window).height()-$('[data-target="'+e+'"]').outerHeight())/2;
+		if ( t < 0 ) {
+			t = 0;
+		}
+		$('[data-target="'+e+'"]').css({
+			'top': t+'px'
+		}).stop(true,true).fadeIn(250);
+		$('.fade').stop(true,true).fadeIn(250);
+		event.preventDefault();
+	});
+	$('[data-target] .close, .fade').bind('click', function() {
+		$('[data-target], .fade').stop(true,true).fadeOut(250);
+	});
 });
 $(window).resize(function() {
 	if ( $('header').length > 0 ) {
@@ -199,5 +253,8 @@ $(window).load(function() {
 		$('.development-b .benefits > div > div').css({
 			'opacity': '1'
 		});
+		if ( $('.development-b .benefits h2').outerHeight() > 30 ) {
+			$('.development-b .benefits h2').addClass('left');
+		}
 	}
 });

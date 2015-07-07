@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Алтайская машиностроительная компания</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=1040, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">-->
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<!--[if IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header class="light">
+			<div>
+				<h5>+7 (3852) 500-397, 500-393</h5>
+				<ul class="menu lc">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Каталог</a></li>
+				</ul>
+				<div class="logo">
+					<a href="#"><img src="./img/logo_l.png" width="222" height="74" alt=""></a>
+				</div>
+				<ul class="menu rc">
+					<li><a href="#">Производство</a></li>
+					<li><a href="#">Разработки</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<h3><span>Алтайская машиностроительная компания</span></h3>
+				<ul class="language">
+					<li class="active"><a href="#">Ru</a></li>
+					<li><a href="#">En</a></li>
+				</ul>
+				<button>Сделать заявку</button>
+			</div>
+		</header>
+		<main>
+			<div class="page-title light">
+				<h1>Карта поставок</h1>
+				<ul>
+					<li class="active"><a href="#" class="map"><span>Карта поставок</span></a></li>
+					<li><a href="#" class="certificates"><span>Сертификаты</span></a></li>
+					<li><a href="#" class="clients"><span>Клиенты</span></a></li>
+				</ul>
+			</div>
+			<section class="map-b">
+				<div class="core" id="big-map">
+					<script src="https://maps.googleapis.com/maps/api/js"></script>
+					<script>
+						var customMap = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ced6e2"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#2a3647"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#1b232e"}]}]
+					
+						function initialize() {
+							var mapCanvas = document.getElementById('big-map');
+							var mapOptions = {
+								center: new google.maps.LatLng(60, 75),
+								zoom: 3,
+								mapTypeId: google.maps.MapTypeId.ROADMAP
+							}
+							var map = new google.maps.Map(mapCanvas, mapOptions);
+							map.setOptions({styles: customMap});
+							
+							var mainIcon = './img/main_marker.png';
+							var defaultIcon = './img/default_marker.png';
+							
+							var barnaul = new google.maps.LatLng(53.5, 84);
+							var moscow = new google.maps.LatLng(56, 38);
+							
+							var mainMarker = new google.maps.Marker({
+								position: barnaul,
+								map: map,
+								icon: mainIcon
+							});
+							
+							var marker1 = new google.maps.Marker({
+								position: moscow,
+								map: map,
+								icon: defaultIcon
+							});
+						}
+						google.maps.event.addDomListener(window, 'load', initialize);
+					</script>
+				</div>
+			</section>
+		</main>
+		<div class="clear"></div>
+	</div>
+	<footer class="light">
+		<div>
+			<div class="address">
+				<p>Все права защищены © 2009-2015</p>
+				<p>ЗАО «Алтайская Машиностроительная Компания»</p>
+				<p>Россия, Алтайский край, 656037, г. Барнаул, пр. Калинина, 28.</p>
+			</div>
+			<div class="contacts">
+				<p>Телефоны: <strong>+7 (3852) 500-397, 500-393</strong></p>
+				<p>Факс: <strong>+7 (3852) 655-466</strong></p>
+				<p class="email">amk@almash.ru</p>
+			</div>
+			<h5>Разработка сайта — Let’s Rock</h5>
+		</div>
+	</footer>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</body>
+</html>
