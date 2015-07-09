@@ -29,9 +29,9 @@ function catalogLinkEm() {
 		});
 	});
 }
-function catalogValvesDesign() {
-	var t = $('.catalog-m .main .valves-design a');
-	var w = $('.catalog-m').width()-(t.offset().left+t.outerWidth());
+function valvesDesign() {
+	var t = $('.valves-design a');
+	var w = $('.wrapper').width()-(t.offset().left+t.outerWidth());
 	t.children('em').css({
 		'right': -w+'px',
 		'width': w+'px'
@@ -51,6 +51,54 @@ function developmentUl() {
 			'right': -w+'px',
 			'width': w+'px'
 		});
+	});
+}
+function introSlider() {
+	var ml = $('.wrapper').width()-$('.slider-m > div').width();
+	if ( ml > 0 ) {
+		ml = 0;
+	}
+	$('.slider-m > div').draggable({
+		axis: 'x',
+		containment: [ eval(ml), 0, 0, 0],
+		drag: function(event, ui) {
+			var p = ui.position.left/($('.slider-m > div').width()-$('.slider-m').width());
+			var t = $('.intro-i .navigator').width()-$('.intro-i .navigator > span').width();
+			$('.intro-i .navigator > span').css({
+				'left': -t*p+'px'
+			});
+		}
+	});
+	$('.intro-i .navigator > span').width($('.slider-m').width()/$('.slider-m > div').width()*$('.intro-i .navigator').width());
+}
+function introLink() {
+	$('.intro-i .link').width(($('.intro-i').width()-960)/2+62);
+}
+function newsIndex() {
+	var s = $('.news-i').width()-960;
+	$('.news-i .core > div > div > ul').css({
+		'padding-left': s/2+'px',
+		'padding-right': s/2+'px'
+	});
+	var w = $('.news-i .core > div > div ul').outerWidth();
+	$('.news-i > .core > div > div').width(w);
+	var ml = $('.wrapper').width()-w;
+	if ( ml > 0 ) {
+		ml = 0;
+	}
+	$('.news-i .core > div').draggable({
+		axis: 'x',
+		containment: [ eval(ml), 0, 0, 0],
+		drag: function(event, ui) {
+			var p = -ui.position.left/($('.news-i .core > div > div').outerWidth()-$('.news-i .core > div').width());
+			$('.news-i .core .line').width(960*p);
+		}
+	});
+}
+function aboutInteractive() {
+	var l = (1920-$('.wrapper').width())/2;
+	$('.about-i > div').css({
+		'left': -l+'px'
 	});
 }
 $(document).ready(function() {
@@ -89,9 +137,9 @@ $(document).ready(function() {
 		$('.catalog-m .main .link').append('<em></em>');
 		catalogLinkEm();
 	}
-	if ( $('.catalog-m .main .valves-design').length > 0 ) {
-		$('.catalog-m .main .valves-design a').append('<em></em>');
-		catalogValvesDesign();
+	if ( $('.valves-design').length > 0 ) {
+		$('.valves-design a').append('<em></em>');
+		valvesDesign();
 	}
 	$('.production-b > ul > li .title').bind('click', function() {
 		$(this).stop(true,true).slideUp(250);
@@ -191,6 +239,63 @@ $(document).ready(function() {
 	$('[data-target] .close, .fade').bind('click', function() {
 		$('[data-target], .fade').stop(true,true).fadeOut(250);
 	});
+	if ( $('.slider-m').length > 0 ) {
+		$('.intro-i .navigator > span').draggable({
+			axis: 'x',
+			containment: 'parent',
+			drag: function(event, ui) {
+				var p = ui.position.left/($('.intro-i .navigator').width()-$('.intro-i .navigator > span').width());
+				var t = $('.slider-m > div').width()-$('.slider-m').width();
+				$('.slider-m > div').css({
+					'left': -t*p+'px'
+				});
+			}
+		});
+		introSlider();
+		$('area').hover(
+			function() {
+				var t = $(this).parent().parent();
+				t.find('img').css({
+					'opacity': '1'
+				});
+				if ( t.offset().left+t.width()+t.find('div').width()+28 < $('.slider-m').width() ) {
+					t.find('div').removeClass().addClass('rp').css({
+						'left': t.width()+'px',
+						'right': 'auto'
+					}).stop(true,true).delay(150).fadeIn(250);
+				}
+				else {
+					t.find('div').removeClass().addClass('lp').css({
+						'left': 'auto',
+						'right': t.width()+'px'
+					}).stop(true,true).delay(150).fadeIn(250);
+				}
+			}
+		);
+		$('.slider-m .dummy').hover(
+			function() {
+				var t = $(this).parent();
+				t.find('img').css({
+					'opacity': '0'
+				});
+				t.children('div').children('div').stop(true,true).delay(150).fadeOut(250);
+			}
+		);
+		$('.slider-m > div > div').hover(
+			function() {
+				$(this).siblings().find('img').css({
+					'opacity': '0'
+				});
+				$(this).siblings().find('div').stop(true,true).delay(150).fadeOut(250);
+			}
+		);
+	}
+	if ( $('.intro-i').length > 0 ) {
+		introLink();
+	}
+	if ( $('.news-i').length > 0 ) {
+		newsIndex();
+	}
 });
 $(window).resize(function() {
 	if ( $('header').length > 0 ) {
@@ -202,8 +307,8 @@ $(window).resize(function() {
 	if ( $('.catalog-m .main .link').length > 0 ) {
 		catalogLinkEm();
 	}
-	if ( $('.catalog-m .main .valves-design').length > 0 ) {
-		catalogValvesDesign();
+	if ( $('.valves-design').length > 0 ) {
+		valvesDesign();
 	}
 	if ( $('.development-b .main ul').length > 0 ) {
 		developmentUl();
@@ -213,6 +318,18 @@ $(window).resize(function() {
 			'left': $('.legend-link').offset().left+$('.legend-link').outerWidth()+'px',
 			'top': $('.legend-link').offset().top+'px',
 		});
+	}
+	if ( $('.slider-m').length > 0 ) {
+		introSlider();
+	}
+	if ( $('.intro-i').length > 0 ) {
+		introLink();
+	}
+	if ( $('.news-i').length > 0 ) {
+		newsIndex();
+	}
+	if ( $('.about-i').length > 0 ) {
+		aboutInteractive();
 	}
 });
 $(window).load(function() {
@@ -246,7 +363,7 @@ $(window).load(function() {
 			});
 		});
 	}
-	if ( $('.development-b .benefits') ) {
+	if ( $('.development-b .benefits').length > 0 ) {
 		$('.development-b .benefits > div').masonry({
 			itemSelector: 'div'
 		});
@@ -256,5 +373,8 @@ $(window).load(function() {
 		if ( $('.development-b .benefits h2').outerHeight() > 30 ) {
 			$('.development-b .benefits h2').addClass('left');
 		}
+	}
+	if ( $('.about-i').length > 0 ) {
+		aboutInteractive();
 	}
 });
