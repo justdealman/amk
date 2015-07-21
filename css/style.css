@@ -2215,7 +2215,7 @@ footer.light h5 {
 	-moz-transition:background 0.2s ease-in-out;
 	-o-transition:background 0.2s ease-in-out;
 }
-.development-b .main ul li.active > em {
+.development-b .main ul li.active > em, .development-b .main ul li:hover > em {
 	background:#c20016;
 }
 .development-b .main ul li a {
@@ -2235,7 +2235,7 @@ footer.light h5 {
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition:all 0.2s ease-in-out;
 }
-.development-b .main ul li.active a {
+.development-b .main ul li.active a, .development-b .main ul li a:hover {
 	background:#c20016;
 	border:5px solid #c20016;
 }
