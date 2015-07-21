@@ -68,9 +68,20 @@ function introSlider() {
 				'left': -Math.round(t*p)+'px',
 				'background-position': Math.round(t*p)+5+'px top'
 			});
+		},
+		create: function(event, ui) {
+			$('.slider-m > div').stop(true,true).animate({
+				'left': '-80px'
+			}, 1000, 'easeOutBack');
+			$('.intro-i .navigator > span').width($('.slider-m').width()/$('.slider-m > div').width()*$('.intro-i .navigator').width());
+			var p = -80/($('.slider-m > div').width()-$('.slider-m').width());
+			var t = $('.intro-i .navigator').width()-$('.intro-i .navigator > span').width();
+			$('.intro-i .navigator > span').css({
+				'left': -Math.round(t*p)+'px',
+				'background-position': Math.round(t*p)+5+'px top'
+			});
 		}
 	});
-	$('.intro-i .navigator > span').width($('.slider-m').width()/$('.slider-m > div').width()*$('.intro-i .navigator').width());
 }
 function introLink() {
 	$('.intro-i .link').width(($('.intro-i').width()-960)/2+150);
