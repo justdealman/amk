@@ -1789,6 +1789,7 @@ footer.light h5 {
 	right:0;
 	bottom:0;
 	left:0;
+	display:none;
 	max-width:960px;
 	max-height:602px;
 	margin:auto;
@@ -4271,15 +4272,15 @@ footer.light h5 {
 	position:relative;
 	z-index:5;
 	width:100%;
-	height:404px;
+	height:423px;
 	margin:-79px 0 20px;
 	cursor:move;
 	cursor:e-resize;
 }
 .slider-m > div {
 	position:relative;
-	width:4148px;
-	height:406px;
+	width:6188px;
+	height:423px;
 	margin:0 auto;
 	background:url('../img/slider_m_new_bg.png') no-repeat left 97px;
 }
@@ -4287,8 +4288,8 @@ footer.light h5 {
 	position:absolute;
 	left:0;
 	top:0;
-	width:4148px;
-	height:406px;
+	width:6188px;
+	height:423px;
 }
 .slider-m img {
 	position:absolute;
@@ -4348,213 +4349,214 @@ footer.light h5 {
 	right:-20px;
 	background:url('../img/slider_tip_arrow.png') no-repeat -20px top;
 }
-.slider-m .detail1 {
+.slider-m .detail13 {
 	position:absolute;
 	left:112px;
+	left:2152px;
 	top:111px;
 	width:342px;
 	height:294px;
 	background:url('../pic/elements2/detail1.png') no-repeat left top;
 }
-.slider-m .detail2 {
+.slider-m .detail14 {
 	position:absolute;
-	left:476px;
+	left:2516px;
 	top:212px;
 	width:90px;
 	height:149px;
 	background:url('../pic/elements2/detail2.png') no-repeat left top;
 }
-.slider-m .detail3 {
+.slider-m .detail15 {
 	position:absolute;
-	left:595px;
+	left:2635px;
 	top:237px;
 	width:78px;
 	height:126px;
 	background:url('../pic/elements2/detail3.png') no-repeat left top;
 }
-.slider-m .detail4 {
+.slider-m .detail16 {
 	position:absolute;
-	left:708px;
+	left:2748px;
 	top:149px;
 	width:107px;
 	height:213px;
 	background:url('../pic/elements2/detail4.png') no-repeat left top;
 }
-.slider-m .detail5 {
+.slider-m .detail17 {
 	position:absolute;
-	left:863px;
+	left:2903px;
 	top:217px;
 	width:82px;
 	height:145px;
 	background:url('../pic/elements2/detail5.png') no-repeat left top;
 }
-.slider-m .detail6 {
+.slider-m .detail18 {
 	position:absolute;
-	left:969px;
+	left:3009px;
 	top:203px;
 	width:57px;
 	height:157px;
 	background:url('../pic/elements2/detail6.png') no-repeat left top;
 }
-.slider-m .detail7 {
+.slider-m .detail19 {
 	position:absolute;
-	left:1054px;
+	left:3094px;
 	top:203px;
 	width:68px;
 	height:158px;
 	background:url('../pic/elements2/detail7.png') no-repeat left top;
 }
-.slider-m .detail8 {
+.slider-m .detail20 {
 	position:absolute;
-	left:1152px;
+	left:3192px;
 	top:222px;
 	width:121px;
 	height:140px;
 	background:url('../pic/elements2/detail8.png') no-repeat left top;
 }
-.slider-m .detail9 {
+.slider-m .detail21 {
 	position:absolute;
-	left:1304px;
+	left:3344px;
 	top:203px;
 	width:93px;
 	height:161px;
 	background:url('../pic/elements2/detail9.png') no-repeat left top;
 }
-.slider-m .detail10 {
+.slider-m .detail22 {
 	position:absolute;
-	left:1420px;
+	left:3460px;
 	top:206px;
 	width:104px;
 	height:156px;
 	background:url('../pic/elements2/detail10.png') no-repeat left top;
 }
-.slider-m .detail11 {
+.slider-m .detail23 {
 	position:absolute;
-	left:1522px;
+	left:3562px;
 	top:213px;
 	width:91px;
 	height:150px;
 	background:url('../pic/elements2/detail11.png') no-repeat left top;
 }
-.slider-m .detail12 {
+.slider-m .detail24 {
 	position:absolute;
-	left:1634px;
+	left:3674px;
 	top:185px;
 	width:128px;
 	height:177px;
 	background:url('../pic/elements2/detail12.png') no-repeat left top;
 }
-.slider-m .detail13 {
+.slider-m .detail25 {
 	position:absolute;
-	left:1774px;
+	left:3814px;
 	top:206px;
 	width:290px;
 	height:153px;
 	background:url('../pic/elements2/detail13.png') no-repeat left top;
 }
-.slider-m .detail14 {
+.slider-m .detail26 {
 	position:absolute;
-	left:2089px;
+	left:4129px;
 	top:88px;
 	width:219px;
 	height:274px;
 	background:url('../pic/elements2/detail14.png') no-repeat left top;
 }
-.slider-m .detail15 {
+.slider-m .detail27 {
 	position:absolute;
-	left:2326px;
+	left:4366px;
 	top:111px;
 	width:126px;
 	height:252px;
 	background:url('../pic/elements2/detail15.png') no-repeat left top;
 }
-.slider-m .detail16 {
+.slider-m .detail28 {
 	position:absolute;
-	left:2468px;
+	left:4508px;
 	top:281px;
 	width:82px;
 	height:83px;
 	background:url('../pic/elements2/detail16.png') no-repeat left top;
 }
-.slider-m .detail17 {
+.slider-m .detail29 {
 	position:absolute;
-	left:2566px;
+	left:4606px;
 	top:278px;
 	width:70px;
 	height:86px;
 	background:url('../pic/elements2/detail17.png') no-repeat left top;
 }
-.slider-m .detail18 {
+.slider-m .detail30 {
 	position:absolute;
-	left:2645px;
+	left:4685px;
 	top:276px;
 	width:118px;
 	height:90px;
 	background:url('../pic/elements2/detail18.png') no-repeat left top;
 }
-.slider-m .detail19 {
+.slider-m .detail31 {
 	position:absolute;
-	left:2794px;
+	left:4834px;
 	top:166px;
 	width:112px;
 	height:199px;
 	background:url('../pic/elements2/detail19.png') no-repeat left top;
 }
-.slider-m .detail20 {
+.slider-m .detail32 {
 	position:absolute;
-	left:2928px;
+	left:4968px;
 	top:168px;
 	width:126px;
 	height:195px;
 	background:url('../pic/elements2/detail20.png') no-repeat left top;
 }
-.slider-m .detail21 {
+.slider-m .detail33 {
 	position:absolute;
-	left:3065px;
+	left:5105px;
 	top:244px;
 	width:131px;
 	height:121px;
 	background:url('../pic/elements2/detail21.png') no-repeat left top;
 }
-.slider-m .detail22 {
+.slider-m .detail34 {
 	position:absolute;
-	left:3179px;
+	left:5219px;
 	top:74px;
 	width:178px;
 	height:288px;
 	background:url('../pic/elements2/detail22.png') no-repeat left top;
 }
-.slider-m .detail23 {
+.slider-m .detail35 {
 	position:absolute;
-	left:3380px;
+	left:5420px;
 	top:81px;
 	width:152px;
 	height:284px;
 	background:url('../pic/elements2/detail23.png') no-repeat left top;
 }
-.slider-m .detail24 {
+.slider-m .detail36 {
 	position:absolute;
-	left:3531px;
+	left:5571px;
 	top:95px;
 	width:134px;
 	height:268px;
 	background:url('../pic/elements2/detail24.png') no-repeat left top;
 }
-.slider-m .detail25 {
+.slider-m .detail37 {
 	position:absolute;
-	left:3695px;
+	left:5735px;
 	top:0;
 	width:359px;
 	height:403px;
 	background:url('../pic/elements2/detail25.png') no-repeat left top;
 }
-.slider-m .detail25 > div {
+.slider-m .detail37 > div {
 	margin-right:-170px;
 }
-/*.slider-m .detail1 {
+.slider-m .detail1 {
 	position:absolute;
 	left:100px;
-	top:171px;
+	top:190px;
 	width:143px;
 	height:180px;
 	background:url('../pic/elements/detail1.png') no-repeat left top;
@@ -4562,7 +4564,7 @@ footer.light h5 {
 .slider-m .detail2 {
 	position:absolute;
 	left:263px;
-	top:97px;
+	top:116px;
 	width:161px;
 	height:254px;
 	background:url('../pic/elements/detail2.png') no-repeat left top;
@@ -4570,7 +4572,7 @@ footer.light h5 {
 .slider-m .detail3 {
 	position:absolute;
 	left:401px;
-	top:153px;
+	top:172px;
 	width:109px;
 	height:196px;
 	background:url('../pic/elements/detail3.png') no-repeat left top;
@@ -4578,7 +4580,7 @@ footer.light h5 {
 .slider-m .detail4 {
 	position:absolute;
 	left:520px;
-	top:193px;
+	top:212px;
 	width:129px;
 	height:159px;
 	background:url('../pic/elements/detail4.png') no-repeat left top;
@@ -4586,7 +4588,7 @@ footer.light h5 {
 .slider-m .detail5 {
 	position:absolute;
 	left:638px;
-	top:153px;
+	top:172px;
 	width:136px;
 	height:198px;
 	background:url('../pic/elements/detail5.png') no-repeat left top;
@@ -4594,7 +4596,7 @@ footer.light h5 {
 .slider-m .detail6 {
 	position:absolute;
 	left:774px;
-	top:164px;
+	top:183px;
 	width:84px;
 	height:187px;
 	background:url('../pic/elements/detail6.png') no-repeat left top;
@@ -4602,7 +4604,7 @@ footer.light h5 {
 .slider-m .detail7 {
 	position:absolute;
 	left:866px;
-	top:153px;
+	top:172px;
 	width:170px;
 	height:200px;
 	background:url('../pic/elements/detail7.png') no-repeat left top;
@@ -4610,7 +4612,7 @@ footer.light h5 {
 .slider-m .detail8 {
 	position:absolute;
 	left:1025px;
-	top:0;
+	top:19px;
 	width:327px;
 	height:404px;
 	background:url('../pic/elements/detail8.png') no-repeat left top;
@@ -4618,7 +4620,7 @@ footer.light h5 {
 .slider-m .detail9 {
 	position:absolute;
 	left:1362px;
-	top:108px;
+	top:127px;
 	width:135px;
 	height:238px;
 	background:url('../pic/elements/detail9.png') no-repeat left top;
@@ -4626,7 +4628,7 @@ footer.light h5 {
 .slider-m .detail10 {
 	position:absolute;
 	left:1487px;
-	top:130px;
+	top:149px;
 	width:184px;
 	height:217px;
 	background:url('../pic/elements/detail10.png') no-repeat left top;
@@ -4634,7 +4636,7 @@ footer.light h5 {
 .slider-m .detail11 {
 	position:absolute;
 	left:1663px;
-	top:37px;
+	top:56px;
 	width:309px;
 	height:346px;
 	background:url('../pic/elements/detail11.png') no-repeat left top;
@@ -4642,7 +4644,7 @@ footer.light h5 {
 .slider-m .detail12 {
 	position:absolute;
 	left:1986px;
-	top:207px;
+	top:226px;
 	width:155px;
 	height:142px;
 	background:url('../pic/elements/detail12.png') no-repeat left top;
@@ -4652,7 +4654,7 @@ footer.light h5 {
 }
 .slider-m .detail11 > div {
 	margin-right:-170px;
-}*/
+}
 .intro-i {
 	position:relative;
 	height:223px;

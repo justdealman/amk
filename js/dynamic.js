@@ -338,6 +338,13 @@ $(document).ready(function() {
 		window.location = $(this).attr('data-href');
 		event.preventDefault();
 	});
+	if ( $('.catalog-m .main').length > 0 ) {
+		$('.catalog-m .main .link a').hover(function() {
+			console.log('asdasd');
+			$(this).parents('.main').find('img[data-img="'+$(this).parent().attr('data-hover')+'"]').stop(true,true).fadeIn(250).siblings('img').fadeOut(250);
+		});
+		$('.catalog-m .main img[data-img="1"').stop(true,true).fadeIn(250);
+	}
 });
 $(window).resize(function() {
 	if ( $('header').length > 0 ) {
