@@ -66,7 +66,7 @@ function introSlider() {
 			var t = $('.intro-i .navigator').width()-$('.intro-i .navigator > span').width();
 			$('.intro-i .navigator > span').css({
 				'left': -Math.round(t*p)+'px',
-				'background-position': Math.round(t*p)+5+'px top'
+				'background-position': Math.round(t*p)+'px top'
 			});
 		},
 		create: function(event, ui) {
@@ -78,7 +78,7 @@ function introSlider() {
 			var t = $('.intro-i .navigator').width()-$('.intro-i .navigator > span').width();
 			$('.intro-i .navigator > span').css({
 				'left': -Math.round(t*p)+'px',
-				'background-position': Math.round(t*p)+5+'px top'
+				'background-position': Math.round(t*p)+'px top'
 			});
 		}
 	});
@@ -285,7 +285,7 @@ $(document).ready(function() {
 					'left': -t*p+'px'
 				});
 				$('.intro-i .navigator > span').css({
-					'background-position': -Math.round(ui.position.left)+5+'px top'
+					'background-position': -Math.round(ui.position.left)+'px top'
 				});
 			}
 		});
