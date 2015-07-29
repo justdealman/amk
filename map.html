@@ -50,7 +50,7 @@
 					<script src="https://maps.googleapis.com/maps/api/js"></script>
 					<script>
 						var customMap = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ced6e2"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#2a3647"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#1b232e"},{"lightness":0}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#1b232e"}]}]
-					
+
 						function initialize() {
 							var mapCanvas = document.getElementById('big-map');
 							var mapOptions = {
@@ -73,10 +73,30 @@
 								icon: mainIcon
 							});
 							
+							var content1 = '<div class="bubble">'+
+								'<div class="images">'+
+									'<div class="main">'+
+										'<img src="./pic/d1.jpg" width="154" height="130" alt="">'+
+									'</div>'+
+									'<div class="logo">'+
+										'<img src="./pic/d1_logo.png" width="70" height="92" alt="">'+
+									'</div>'+
+								'</div>'+
+								'<p>ОАО «Дорогобуж», п. Верхнеднепровский, Дорогобужский район, Смоленская обл., Россия, 215753</p>'+
+								'</div>';
+
+							var infowindow1 = new google.maps.InfoWindow({
+								content: content1
+							});
 							var marker1 = new google.maps.Marker({
 								position: moscow,
 								map: map,
 								icon: defaultIcon
+							});
+							
+							google.maps.event.addListener(marker1, 'click', function() {
+								infowindow1.open(map, marker1);
+								//map.panTo(marker1.getPosition());
 							});
 						}
 						google.maps.event.addDomListener(window, 'load', initialize);

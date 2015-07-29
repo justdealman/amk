@@ -5097,3 +5097,61 @@ footer.light h5 {
 .news-i .core > div > div ul li a:hover p {
 	color:#ffffff;
 }
+.bubble {
+	width:275px;
+	margin:11px 0 0 5px;
+}
+.bubble p {
+	position:relative;
+	color:#000000;
+	font-size:14px;
+	line-height:16px;
+    font-family:'Officina Sans Book', sans-serif;
+	padding:0 0 0 17px;
+	margin:0 0 12px;
+}
+.bubble p:before {
+	content:'—';
+	position:absolute;
+	left:0;
+	top:0;
+}
+.bubble .images {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	height:130px;
+	margin:0 0 17px;
+}
+.bubble .images .main {
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	width:154px;
+	height:130px;
+}
+.bubble .images .main img {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:154px;
+	min-height:130px;
+}
+.bubble .images .logo {
+	position:absolute;
+	right:0;
+	top:10px;
+	width:86px;
+	height:110px;
+}
+.bubble .images .logo img {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	max-width:86px;
+	max-height:110px;
+	margin:auto;
+}
