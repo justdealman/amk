@@ -3894,7 +3894,7 @@ footer.light h5 {
 	background:#1b232e;
 }
 .gmnoprint {
-	display:none;
+	max-height:50px;
 }
 .map-b .contacts {
 	position:absolute;

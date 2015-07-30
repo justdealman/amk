@@ -56,7 +56,20 @@
 							var mapOptions = {
 								center: new google.maps.LatLng(60, 75),
 								zoom: 3,
-								mapTypeId: google.maps.MapTypeId.ROADMAP
+								mapTypeId: google.maps.MapTypeId.ROADMAP,
+								scrollwheel: false,
+								panControl: false,
+								zoomControl: true,
+								zoomControlOptions: {
+									//style: google.maps.ZoomControlStyle.SMALL,
+									position: google.maps.ControlPosition.LEFT_CENTER
+								},
+								minZoom: 3,
+								maxZoom: 5,
+								mapTypeControl: false,
+								scaleControl: false,
+								streetViewControl: false,
+								overviewMapControl: false
 							}
 							var map = new google.maps.Map(mapCanvas, mapOptions);
 							map.setOptions({styles: customMap});
