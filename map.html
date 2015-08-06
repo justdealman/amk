@@ -86,7 +86,10 @@
 								icon: mainIcon
 							});
 							
-							var content1 = '<div class="bubble">'+
+							var content1 = '<div class="bubble multiply">'+
+								'<div class="container"></div>'+
+								'<div class="temp">'+
+								'<div>'+
 								'<div class="images">'+
 									'<div class="main">'+
 										'<img src="./pic/d1.jpg" width="154" height="130" alt="">'+
@@ -96,6 +99,19 @@
 									'</div>'+
 								'</div>'+
 								'<p>ОАО «Дорогобуж», п. Верхнеднепровский, Дорогобужский район, Смоленская обл., Россия, 215753</p>'+
+								'</div>'+
+								'<div>'+
+								'<div class="images">'+
+									'<div class="main">'+
+										'<img src="./pic/d1.jpg" width="154" height="130" alt="">'+
+									'</div>'+
+									'<div class="logo">'+
+										'<img src="./pic/d1_logo.png" width="70" height="92" alt="">'+
+									'</div>'+
+								'</div>'+
+								'<p>ОАО «Дорогобуж», п. Верхнеднепровский, Дорогобужский район, Смоленская обл., Россия, 215753</p>'+
+								'</div>'+
+								'</div>'+
 								'</div>';
 
 							var infowindow1 = new google.maps.InfoWindow({
@@ -104,11 +120,24 @@
 							var marker1 = new google.maps.Marker({
 								position: moscow,
 								map: map,
-								icon: defaultIcon
+								icon: defaultIcon,
 							});
 							
-							google.maps.event.addListener(marker1, 'click', function() {
+							google.maps.event.addListener(marker1, 'click', function(event) {
 								infowindow1.open(map, marker1);
+								$('.bubble').each(function() {
+									$(this).find('.container').empty();
+									$(this).find('.prev, .next').remove();
+									$(this).find('.container').html($(this).find('.temp').html());
+								});
+								$('.bubble').slides({
+									generatePagination: false,
+									generateNextPrev: true,
+									container: 'container',
+									effect: 'slide',
+									slideSpeed: 500,
+									play: 0,
+								});
 								//map.panTo(marker1.getPosition());
 							});
 						}
@@ -137,6 +166,7 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
 </body>
 </html>
