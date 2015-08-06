@@ -345,6 +345,19 @@ $(document).ready(function() {
 		});
 		$('.catalog-m .main img[data-img="1"').stop(true,true).fadeIn(250);
 	}
+	if ( $('.user-select').length > 0 ) {
+		$('.user-select').each(function() {
+			$(this).find('input').val($(this).find('select').val());
+		});
+		$('.open-select').bind('click', function(event) {
+			$(this).parent().find('.select').trigger('click');
+		});
+		$('select').change(function() {
+			if ( $(this).parents().hasClass('user-select') ) {
+				$(this).parents('.user-select').find('input').val($(this).val());
+			}
+		});
+	}
 });
 $(window).resize(function() {
 	if ( $('header').length > 0 ) {

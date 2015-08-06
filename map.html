@@ -79,6 +79,7 @@
 							
 							var barnaul = new google.maps.LatLng(53.5, 84);
 							var moscow = new google.maps.LatLng(56, 38);
+							var city3 = new google.maps.LatLng(44, 120);
 							
 							var mainMarker = new google.maps.Marker({
 								position: barnaul,
@@ -113,18 +114,38 @@
 								'</div>'+
 								'</div>'+
 								'</div>';
+							
+							var content2 = '<div class="bubble">'+
+								'<div class="container"></div>'+
+								'<div class="temp">'+
+								'<div>'+
+								'<div class="images">'+
+									'<div class="main">'+
+										'<img src="./pic/d1.jpg" width="154" height="130" alt="">'+
+									'</div>'+
+									'<div class="logo">'+
+										'<img src="./pic/d1_logo.png" width="70" height="92" alt="">'+
+									'</div>'+
+								'</div>'+
+								'<p>ОАО «Дорогобуж», п. Верхнеднепровский, Дорогобужский район, Смоленская обл., Россия, 215753</p>'+
+								'</div>'+
+								'</div>'+
+								'</div>';
 
-							var infowindow1 = new google.maps.InfoWindow({
-								content: content1
-							});
+							var infowindow = new google.maps.InfoWindow();
+							
 							var marker1 = new google.maps.Marker({
 								position: moscow,
 								map: map,
 								icon: defaultIcon,
 							});
+							var marker2 = new google.maps.Marker({
+								position: city3,
+								map: map,
+								icon: defaultIcon,
+							});
 							
-							google.maps.event.addListener(marker1, 'click', function(event) {
-								infowindow1.open(map, marker1);
+							function bubbleSlider() {
 								$('.bubble').each(function() {
 									$(this).find('.container').empty();
 									$(this).find('.prev, .next').remove();
@@ -138,7 +159,19 @@
 									slideSpeed: 500,
 									play: 0,
 								});
+							}
+							
+							google.maps.event.addListener(marker1, 'click', function(event) {
+								infowindow.setContent(content1);
+								infowindow.open(map, marker1);
+								bubbleSlider();
 								//map.panTo(marker1.getPosition());
+							});
+							
+							google.maps.event.addListener(marker2, 'click', function(event) {
+								infowindow.setContent(content2);
+								infowindow.open(map, marker2);
+								bubbleSlider();
 							});
 						}
 						google.maps.event.addDomListener(window, 'load', initialize);

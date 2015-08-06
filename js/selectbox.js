@@ -105,7 +105,7 @@
 					});
 					/* прячем выпадающий список при клике за пределами селекта */
 					$(document).on('click', function(e) {
-						if (!$(e.target).parents().hasClass('selectbox')) {
+						if (!$(e.target).parents().hasClass('selectbox') && !$(e.target).parents().hasClass('user-select')) {
 							dropdown.hide().find('li.sel').addClass('selected');
 							selectbox.removeClass('focused');
 						}
