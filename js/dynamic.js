@@ -334,7 +334,7 @@ $(document).ready(function() {
 	if ( $('.news-i').length > 0 ) {
 		newsIndex();
 	}
-	$('.catalog-b .specification tbody tr').bind('click', function(event) {
+	$('.catalog-b .specification tbody tr, .table-d tbody tr').bind('click', function(event) {
 		window.location = $(this).attr('data-href');
 		event.preventDefault();
 	});
