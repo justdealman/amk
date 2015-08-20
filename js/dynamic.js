@@ -308,6 +308,16 @@ $(document).ready(function() {
 						'right': t.width()+'px'
 					}).stop(true,true).delay(150).fadeIn(250);
 				}
+				if ( t.find('div').outerHeight() > $('.slider-m').height()-($(this).offset().top-$('.slider-m').offset().top) ) {
+					t.find('div').css({
+						'top': $('.slider-m').height()-($(this).offset().top-$('.slider-m').offset().top)-t.find('div').outerHeight()+'px'
+					});
+				}
+				else {
+					t.find('div').css({
+						'top': '0'
+					});
+				}
 			}
 		);
 		$('.slider-m .dummy').hover(

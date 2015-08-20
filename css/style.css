@@ -892,6 +892,7 @@ footer.light h5 {
 	background:url('../img/filter_brackets.png') no-repeat -37px top;
 }
 .filter .element {
+	position:relative;
 	margin:0 0 15px;
 }
 .filter .element > :first-child {
@@ -939,7 +940,7 @@ footer.light h5 {
 	vertical-align:top;
 	margin:0 0 0 20px;
 }
-.filter .element .range input {
+.filter .element .range > input {
 	width:47px;
 	margin:0 6px 0 0;
 }
@@ -951,12 +952,15 @@ footer.light h5 {
 	vertical-align:top;
 	margin:6px 6px 5px 0;
 }
+.filter .element .range > span.selectbox {
+	margin:0;
+}
 .filter .element .range .selectbox {
-	width:148px;
+	width:100%;
 }
 .filter .element .type {
 	display:inline-block;
-	width:212px;
+	width:224px;
 	vertical-align:top;
 	margin:0 0 0 49px;
 }
