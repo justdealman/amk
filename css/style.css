@@ -2610,8 +2610,7 @@ footer.light h5 {
 	-moz-box-shadow:0 0 25px rgba(0,0,0,0.2);
 	box-shadow:0 0 25px rgba(0,0,0,0.2);
 }
-.legend-modal.right:before {
-	content:'';
+.legend-modal.right em {
 	position:absolute;
 	left:-9px;
 	top:24px;
@@ -2619,14 +2618,16 @@ footer.light h5 {
 	border-top:8px solid transparent;
 	border-bottom:8px solid transparent;
 }
-.legend-modal.left:before {
-	content:'';
+.legend-modal.left em {
 	position:absolute;
-	right:-9px;
-	top:24px;
-	border-left:9px solid #ffffff;
-	border-top:8px solid transparent;
-	border-bottom:8px solid transparent;
+	right:24px;
+	top:-9px;
+	border-bottom:9px solid #ffffff;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+}
+.legend-modal.left {
+	margin-top:32px;
 }
 .legend-modal ul {
 	margin:0;
@@ -5474,4 +5475,31 @@ footer.light h5 {
 	font-size:16px;
 	line-height:24px;
 	margin:0 0 24px;
+}
+table.fixhead {
+	position:fixed;
+	top:0;
+	z-index:100;
+}
+table.fixhead th {
+	font-size:14px;
+	line-height:16px;
+	text-align:left;
+	vertical-align:top;
+	padding:18px 8px 16px;
+	background:#ffffff;
+	border-top:1px solid #262424;
+	border-bottom:1px solid #262424;
+}
+table.fixhead th:first-child {
+	padding-left:0;
+}
+table.fixhead th:last-child {
+	padding-right:0;
+}
+table.fixhead th:nth-child(2n) {
+	background:#f5f7f8;
+}
+table.fixhead tbody {
+	display:none;
 }
