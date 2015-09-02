@@ -5762,11 +5762,12 @@ table.fixhead tbody {
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
 }
 .slider-l ul li:hover p {
-	text-decoration:none;
-}
-.slider-l ul li.active p {
 	text-decoration:none;
 	background:#cfd1d3;
 }
