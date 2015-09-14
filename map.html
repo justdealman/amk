@@ -79,12 +79,13 @@
 							
 							var barnaul = new google.maps.LatLng(53.5, 84);
 							var moscow = new google.maps.LatLng(56, 38);
-							var city3 = new google.maps.LatLng(44, 120);
+							var city3 = new google.maps.LatLng(55.5, 84);
 							
 							var mainMarker = new google.maps.Marker({
 								position: barnaul,
 								map: map,
-								icon: mainIcon
+								icon: mainIcon,
+								zIndex: 0
 							});
 							
 							var content1 = '<div class="bubble multiply">'+
