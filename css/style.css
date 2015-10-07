@@ -5943,3 +5943,6 @@ table.fixhead tbody {
 	left:27px;
 	top:45px;
 }
+.listing .selectbox li:first-child {
+	display:none;
+}
