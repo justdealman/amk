@@ -1157,12 +1157,24 @@ footer.light h5 {
 	font-weight:normal;
     font-family:'Officina Sans Book', sans-serif;
 	text-align:right;
-	padding:0;
-	margin:0 0 16px;
+	padding:8px 0 0;
+	margin:0 0 22px;
 }
 .catalog-b .back a {
 	padding:1px 0 1px 33px;
 	background:url('../img/back_icon.png') no-repeat left top;
+}
+.catalog-b .back a.progressive {
+	float:left;
+	color:#c20016;
+	font-size:18px;
+	line-height:22px;
+	padding:13px 3px 10px 65px;
+	margin:-15px 0 0;
+	background:url('../img/progressive_icon.png') no-repeat left top;
+}
+.catalog-b .back a.progressive:hover {
+	background-position:0 -45px;
 }
 .catalog-b .nav {
 	overflow:hidden;
@@ -1792,8 +1804,41 @@ footer.light h5 {
 	z-index:3;
 	width:960px;
 	height:602px;
-	margin:0 auto;
+	margin:41px auto 0;
 	background:url('../img/catalog_m_main.png') no-repeat center top;
+}
+.catalog-m .main .progressive {
+	position:absolute;
+	left:375px;
+	top:-118px;
+	z-index:10;
+	width:230px;
+	font-size:17px;
+	line-height:20px;
+	font-weight:normal;
+	padding:0;
+}
+.catalog-m .main .progressive a {
+	display:block;
+	min-height:40px;
+	text-decoration:none;
+	padding:39px 0 27px 117px;
+	background:url('../img/main_progressive_icon.png') no-repeat left top;
+}
+.catalog-m .main .progressive a span {
+	color:#c20016;
+	border-bottom:1px solid #77101f;
+	transition:all 0.1s ease-in-out;
+	-webkit-transition:all 0.1s ease-in-out;
+	-moz-transition:all 0.1s ease-in-out;
+	-o-transition:all 0.1s ease-in-out;
+}
+.catalog-m .main .progressive a:hover {
+	background-position:0 -200px;
+}
+.catalog-m .main .progressive a:hover span {
+	color:#ffffff;
+	border-bottom:1px solid transparent;
 }
 .catalog-m .main img {
 	position:absolute;
